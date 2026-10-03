@@ -1,0 +1,15 @@
+[package]
+name = "mindas_core_rust"
+version = "0.1.0"
+edition = "2021"
+authors = ["M.I.N.D.A.S. Core Team"]
+description = "Metacognitive Observer & Dynamic Shared Memory Engine (Rust C-ABI Core)"
+
+[lib]
+name = "mindas_core"
+# Configured to output a Dynamic Shared Library (.dll on Windows, .so on Linux, .dylib on macOS) 
+# along with a standard Rust library (.rlib) for FFI dynamic bridging.
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# Native thread-safe primitives are used. Add external dependencies here if required.
